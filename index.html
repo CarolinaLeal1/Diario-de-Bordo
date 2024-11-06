@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário de Bordo - Carolina Leal</title>
+    <style>
+        /* Fundo fixo no body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0 50px;
+            padding: 0 20px;
+            text-align: center;
+            background-image: url('Diario-de-Bordo/fundo.png'); /* Caminho atualizado */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            padding-bottom: 100px;
+        }
+
+        /* Estilo da faixa do título */
+        .faixa-titulo {
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+            margin: 15px 0;
+        }
+
+        /* Cor do título principal */
+        h1 {
+            font-size: 24px;
+            color: #007bff;
+        }
+
+        /* Cor dos títulos */
+        h2 {
+            font-size: 20px;
+            color: #00e613;
+        }
+
+        /* Estilo do link dos PDFs */
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        /* Contêiner principal */
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 10px;
+        }
+
+        /* Contêiner que vai envolver o bloco de visita e a galeria de imagens */
+        .container-visita {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 60px;
+            width: 100%;
+        }
+
+        /* Estilo de cada bloco de visita */
+        .visita {
+            width: 48%;
+            margin: 55px 35px; 
+            padding: 15px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Efeito de hover nos blocos */
+        .visita:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estilo para as galerias de imagens fora dos blocos de texto */
+        .galeria-visita {
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+            width: 48%;
+        }
+
+        .galeria-visita img {
+            width: 150px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        /* Media Queries para responsividade */
+        @media (max-width: 768px) {
+            .container-visita {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .visita,
+            .galeria-visita {
+                width: 100%;
+                margin: 20px 0;
+            }
+
+            .galeria-visita img {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Ajuste para a Visita 2 */
+        .container-visita #visita2 {
+            padding-right: 5px;
+        }
+
+        .container-visita .galeria-visita {
+            margin-left: 10px;
+        }
+
+        /* Classe específica para as imagens da Visita 2 */
+        .galeria-visita2 {
+            position: relative;
+            left: 305px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="faixa-titulo">
+            <h1>Diário de Bordo - Carolina Leal</h1>
+        </div>
+    </header>
+
+    <main>
+        <!-- Bloco 1 (Visita 1 à esquerda com imagens à direita) -->
+        <div class="container-visita">
+            <section id="visita1" class="visita">
+                <h2>Visita 1: Visita ao Centro Internacional das Artes José de Guimarães (CIAJG)</h2>
+                <p>Este relatório explora a obra de José de Guimarães, um dos artistas plásticos mais influentes de Portugal, cuja prática artística se destaca pela rica interconexão entre diversas culturas.</p>
+                <a href="Diario-de-Bordo/Relatorio_Jose_de_Guimaraes.pdf" target="_blank">Ver Relatório Completo</a>
+            </section>
+            <div class="galeria-visita">
+                <img src="Diario-de-Bordo/imagem1.jpg" alt="Imagem 1 da Visita 1">
+                <img src="Diario-de-Bordo/imagem2.jpg" alt="Imagem 2 da Visita 1">
+                <img src="Diario-de-Bordo/imagem3.jpg" alt="Imagem 3 da Visita 1">
+            </div>
+        </div>
+
+        <!-- Bloco 2 (Visita 2 à direita com imagens à esquerda) -->
+        <div class="container-visita">
+            <div class="galeria-visita galeria-visita2">
+                <img src="Diario-de-Bordo/imagem4.jpg" alt="Imagem 1 da Visita 2">
+                <img src="Diario-de-Bordo/imagem5.jpg" alt="Imagem 2 da Visita 2">
+            </div>
+            <section id="visita2" class="visita">
+                <h2>Visita 2: Visita ao ateliê do Coletivo Madrôa – fábrica abandonada de couro</h2>
+                <p>Este relatório explora a trajetória de José Teibão, um artista cuja dedicação à arte se destaca como forma de expressão e terapia pessoal. Nascido em Guimarães e licenciado em Microbiologia, Teibão construiu um caminho singular nas artes, enfrentando desafios financeiros e atuando em diversas áreas para sustentar sua prática artística.</p>
+                <a href="Diario-de-Bordo/Relatorio_Jose_Teibao.pdf" target="_blank">Ver Relatório Completo</a>
+            </section>
+        </div>
+
+        <!-- Bloco 3 (Visita 3 à esquerda com imagens à direita) -->
+        <div class="container-visita">
+            <section id="visita3" class="visita">
+                <h2>Visita 3: Aula com Miguel Ângelo Marques</h2>
+                <p>Este relatório apresenta a experiência com o artista Miguel Ângelo Marques, que conduziu uma aula enriquecedora no dia 10 de outubro, seguida por uma visita guiada à exposição CONTEXTILE, realizada no CIAJG em Guimarães.</p>
+                <a href="Diario-de-Bordo/Relatorio_Miguel_Angelo_Marques.pdf" target="_blank">Ver Relatório Completo</a>
+            </section>
+            <div class="galeria-visita">
+                <img src="Diario-de-Bordo/imagem6.jpg" alt="Imagem 1 da Visita 3">
+                <img src="Diario-de-Bordo/imagem7.jpg" alt="Imagem 2 da Visita 3">
+            </div>
+        </div>
+    </main>
+</body>
+</html>
