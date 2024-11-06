@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário de Bordo - Carolina Leal</title>
+    <style>
+        /* Fundo fixo no body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0 50px;
+            padding: 0 20px;
+            text-align: center;
+            background-image: url('fundo.png'); /* Define a imagem de fundo */
+            background-size: cover; /* Faz a imagem cobrir todo o fundo */
+            background-repeat: no-repeat; /* Impede a repetição da imagem */
+            background-attachment: fixed; /* Fundo fixo ao rolar a página */
+            padding-bottom: 100px; /* Adiciona um espaço extra no fundo */
+        }
+
+        /* Estilo da faixa do título */
+        .faixa-titulo {
+            background-color: #ffffff; /* Fundo branco completamente opaco */
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+            margin: 15px 0;
+        }
+
+        /* Cor do título principal (Diário de Bordo - Carolina Leal) */
+        h1 {
+            font-size: 24px;
+            color: #007bff; /* Azul para o título principal */
+        }
+
+        /* Cor dos títulos (Visita 1, Visita 2, etc.) */
+        h2 {
+            font-size: 20px;
+            color: #00e613; /* Verde claro (#00e613) para os títulos dos blocos */
+        }
+
+        /* Estilo do link dos PDFs */
+        a {
+            color: #007bff; /* Azul mais vivo para os links */
+            text-decoration: none; /* Remove o sublinhado padrão */
+        }
+
+        a:hover {
+            color: #0056b3; /* Azul escuro ao passar o mouse */
+        }
+
+        /* Contêiner principal */
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 10px;
+        }
+
+        /* Contêiner que vai envolver o bloco de visita e a galeria de imagens */
+        .container-visita {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 60px; /* Espaço entre os blocos */
+            width: 100%;
+        }
+
+        /* Estilo de cada bloco de visita */
+        .visita {
+            width: 48%; /* Cada bloco ocupa 48% da largura */
+            margin: 55px 35px; 
+            padding: 15px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve para destaque */
+            box-sizing: border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave para transições */
+        }
+
+        /* Efeito de hover nos blocos */
+        .visita:hover {
+            transform: scale(1.05); /* Aumenta o bloco ligeiramente */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+        }
+
+        /* Estilo para as galerias de imagens fora dos blocos de texto */
+        .galeria-visita {
+            display: flex;
+            justify-content: flex-start; /* Imagens à esquerda */
+            gap: 20px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+            width: 48%; /* As galerias ocupam 48% da largura */
+        }
+
+        .galeria-visita img {
+            width: 150px; /* Define um tamanho fixo para as imagens */
+            height: auto; /* Mantém a proporção das imagens */
+            border-radius: 5px; /* Bordas arredondadas para as imagens */
+        }
+
+        /* Media Queries para responsividade */
+        @media (max-width: 768px) {
+            .container-visita {
+                flex-direction: column; /* Coloca os blocos em coluna em telas pequenas */
+                align-items: center; /* Centraliza os itens */
+            }
+
+            .visita,
+            .galeria-visita {
+                width: 100%; /* Em telas pequenas, os blocos e as galerias ocupam 100% da largura */
+                margin: 20px 0; /* Menos margem entre os blocos */
+            }
+
+            .galeria-visita img {
+                width: 100%; /* As imagens ocupam 100% da largura do contêiner */
+                max-width: 100%;
+            }
+
+            h1 {
+                font-size: 1.5rem; /* Reduz o tamanho do título */
+            }
+
+            h2 {
+                font-size: 1.2rem; /* Reduz o tamanho do subtítulo */
+            }
+        }
+
+        /* Ajuste para a Visita 2 - reduzir a margem entre as imagens e o bloco */
+        .container-visita #visita2 {
+            padding-right: 5px; /* Reduz a distância interna do lado direito do bloco */
+        }
+
+        .container-visita .galeria-visita {
+            margin-left: 10px; /* Ajuste a margem para aproximar a galeria da visita */
+        }
+
+        /* Classe específica para as imagens da Visita 2 */
+        .galeria-visita2 {
+            position: relative;
+            left: 305px; /* Move as imagens mais à direita */
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="faixa-titulo">
+            <h1>Diário de Bordo - Carolina Leal</h1>
+        </div>
+    </header>
+
+    <main>
+        <!-- Bloco 1 (Visita 1 à esquerda com imagens à direita) -->
+        <div class="container-visita">
+            <section id="visita1" class="visita">
+                <h2>Visita 1: Visita ao Centro Internacional das Artes José de Guimarães (CIAJG)</h2>
+                <p>Este relatório explora a obra de José de Guimarães, um dos artistas plásticos mais influentes de Portugal, cuja prática artística se destaca pela rica interconexão entre diversas culturas.</p>
+                <a href="Relatório José de Guimarães.pdf" target="_blank">Ver Relatório Completo</a>
+            </section>
+            <div class="galeria-visita">
+                <img src="imagem1.jpg" alt="Imagem 1 da Visita 1">
+                <img src="imagem2.jpg" alt="Imagem 2 da Visita 1">
+                <img src="imagem3.jpg" alt="Imagem 3 da Visita 1">
+            </div>
+        </div>
+
+        <!-- Bloco 2 (Visita 2 à direita com imagens à esquerda) -->
+        <div class="container-visita">
+            <div class="galeria-visita galeria-visita2">
+                <img src="imagem4.jpg" alt="Imagem 1 da Visita 2">
+                <img src="imagem5.jpg" alt="Imagem 2 da Visita 2">
+            </div>
+            <section id="visita2" class="visita">
+                <h2>Visita 2: Visita ao ateliê do Coletivo Madrôa – fábrica abandonada de couro</h2>
+                <p>Este relatório explora a trajetória de José Teibão, um artista cuja dedicação à arte se destaca como forma de expressão e terapia pessoal. Nascido em Guimarães e licenciado em Microbiologia, Teibão construiu um caminho singular nas artes, enfrentando desafios financeiros e atuando em diversas áreas para sustentar sua prática artística.</p>
+                <a href="Relatório José Teibão.pdf" target="_blank">Ver Relatório Completo</a>
+            </section>
+        </div>
+
+        <!-- Bloco 3 (Visita 3 à esquerda com imagens à direita) -->
+        <div class="container-visita">
+            <section id="visita3" class="visita">
+                <h2>Visita 3: Aula com Miguel Ângelo Marques</h2>
+                <p>Este relatório apresenta a experiência com o artista Miguel Ângelo Marques, que conduziu uma aula enriquecedora no dia 10 de outubro, seguida por uma visita guiada à exposição CONTEXTILE, realizada no CIAJG em Guimarães.</p>
+                <a href="Relatório Miguel Ângelo Marques.pdf" target="_blank">Ver Relatório Completo</a>
+            </section>
+            <div class="galeria-visita">
+                <img src="imagem6.jpg" alt="Imagem 1 da Visita 3">
+                <img src="imagem7.jpg" alt="Imagem 2 da Visita 3">
+            </div>
+        </div>
+    </main>
+</body>
+</html>
