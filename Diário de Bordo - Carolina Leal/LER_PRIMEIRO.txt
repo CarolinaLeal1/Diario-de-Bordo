@@ -1,9 +1,0 @@
-Olá professora! Optei por esta forma de apresentação do diário de bordo para proporcionar uma experiência interativa e visualmente atraente, permitindo que o conteúdo seja exibido de maneira clara e organizada. Pode visualizar os relatórios de cada visita ao clicar em "Ver Relatório Completo".
-
-
-Instruções:
-
-1-Descompactar a Pasta: Extraia o arquivo zipado.
-
-2-Abra o arquivo: Dentro da pasta descompactada, encontrará um arquivo chamado "Diário de Bordo - Carolina Leal". Clique duas vezes no arquivo ou clique com o botão direito e selecione "Abrir com" seguido do seu navegador (Google Chrome, etc).
-
